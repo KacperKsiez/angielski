@@ -1,0 +1,263 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic';
+
+body {
+	font-family: 'Roboto', sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #f4f4f4;
+	color: #222;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+button {
+	outline: 0;
+	border: 2px solid rgb(220, 20, 60);
+	background: transparent;
+	color: white;
+	font-size: 1.4rem;
+	font-weight: 300;
+	border-radius: 300px;
+
+	transition: 0.2s;
+}
+
+button a {
+	padding: 1rem 2.4rem;
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+	display: block;
+}
+
+button:hover {
+	background: linear-gradient(rgb(220, 20, 60, 0.7), rgb(220, 20, 60, 0.7));
+}
+
+.header {
+	height: 80px;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	color: white;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 0 10rem;
+
+	transition: 0.3s;
+}
+
+.header__menu-item {
+	color: white;
+}
+
+.header__logo {
+	margin-right: 20px;
+}
+
+.header__logo-text {
+	font-size: 24px;
+}
+
+.header__menu {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.header__menu-item {
+	margin-left: 10px;
+}
+
+.header__menu-item a {
+	text-decoration: none;
+	color: black;
+	padding: 5px;
+}
+
+.hero {
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('./back.jpg');
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 2rem;
+
+	color: white;
+}
+
+.hero h1 {
+	font-weight: 200;
+	margin: 0;
+	letter-spacing: 2px;
+	font-size: 5rem;
+
+	animation: fadeLeft 1.5s backwards;
+	animation-delay: 0.4s;
+}
+
+.hero p {
+	font-size: 2.2rem;
+	margin: 0;
+	animation: fadeRight 1.5s backwards;
+	animation-delay: 1.4s;
+}
+.hero button {
+	animation: fadeDown 1.5s backwards;
+	animation-delay: 2.4s;
+}
+
+@keyframes fadeLeft {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes fadeRight {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes fadeDown {
+	from {
+		transform: translateY(350%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+
+.menu {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.menu h2 {
+	text-align: center;
+}
+
+.menu__category {
+	display: grid;
+	grid-template-rows: 2rem 1fr;
+	grid-template-columns: 50% 50%;
+	grid-column-gap: 3rem;
+}
+
+.menu__category:nth-child(2n) .menu__img {
+	grid-column: 1/2;
+}
+.menu__category:nth-child(2n) .menu__list {
+	grid-column: 2/3;
+}
+
+.menu__category-title {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 400;
+	color: #111;
+}
+
+.menu__list {
+	grid-row: 2;
+	grid-column: 1/2;
+
+	align-self: center;
+}
+
+.menu__img {
+	grid-row: 2;
+	grid-column: 2/3;
+
+	display: block;
+	width: 80%;
+	object-fit: cover;
+	border-radius: 100%;
+
+	aspect-ratio: 1/1;
+
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.header__menu-link {
+	color: white !important;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+	background: linear-gradient(white, white) bottom no-repeat;
+	background-size: 0.5rem 2px;
+	transition: 0.2s;
+}
+
+.header__menu-item a:hover {
+	background: linear-gradient(white, white) bottom no-repeat;
+	background-size: 100% 2px;
+}
+
+.header-scrolled {
+	background-color: white;
+	color: black;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.header-scrolled .header__menu-link {
+	color: black !important;
+	background: linear-gradient(black, black) bottom no-repeat;
+	background-size: 0.5rem 2px;
+}
+.header-scrolled .header__menu-link:hover {
+	color: black !important;
+	background: linear-gradient(black, black) bottom no-repeat;
+	background-size: 100% 2px;
+}
+
+.menu h2 {
+	color: crimson;
+	font-size: 3rem;
+	font-weight: 300;
+	letter-spacing: 2px;
+	margin-top: 4rem;
+}
+
+.fadeIn {
+	animation: fadeLeft 1s backwards;
+	animation-delay: 0.4s;
+}
+
+.fadeIn:nth-child(2n) {
+	animation: fadeRight 1s backwards;
+	animation-delay: 0.4s;
+}
+
+footer {
+	background-color: #222;
+	color: white;
+	text-align: center;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	font-weight: 300;
+	margin-top: 8rem;
+}
+footer p {
+	margin: 0;
+}
